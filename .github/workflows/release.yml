@@ -82,11 +82,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install vcpkg packages
-        shell: pwsh
-        run: |
-          vcpkg install curl[openssl]:x64-windows
-
       - name: Build library
         shell: pwsh
         run: |
@@ -94,7 +89,8 @@ jobs:
             -DCMAKE_BUILD_TYPE=Release `
             -DBUILD_NQE_LIBRARY=ON `
             -DBUILD_EXAMPLES=OFF `
-            -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT\scripts\buildsystems\vcpkg.cmake"
+            -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT\scripts\buildsystems\vcpkg.cmake" `
+            -DVCPKG_TARGET_TRIPLET=x64-windows
           cmake --build build --config Release -j $env:NUMBER_OF_PROCESSORS
 
       - name: Package
