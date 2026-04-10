@@ -1,0 +1,43 @@
+# Build artifacts
+/build
+/build-*/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Testing/
+Makefile
+install_manifest.txt
+compile_commands.json
+
+# CodeQL
+_codeql_*
+
+# Test reports
+nqe_test_report.html
+nqe_test_report.txt
+nqe_demo_report.html
+nqe_demo_report.txt
+
+# IDEs
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Objects/outputs
+*.o
+*.obj
+*.pdb
+*.ilk
+*.exe
+*.dll
+*.so
+*.dylib
+/android_example/obj
+/third_party/curl
+/build_windows
+/chrome_nqe_src
+/build_test/unit_test.dir
+/build_test

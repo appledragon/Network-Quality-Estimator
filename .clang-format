@@ -1,0 +1,13 @@
+BasedOnStyle: LLVM
+IndentWidth: 2
+TabWidth: 2
+UseTab: Never
+ColumnLimit: 110
+ContinuationIndentWidth: 2
+IndentCaseLabels: true
+NamespaceIndentation: None
+SortIncludes: true
+IncludeBlocks: Regroup
+SpaceBeforeParens: ControlStatements
+AllowShortFunctionsOnASingleLine: Empty
+BreakBeforeBraces: Attach

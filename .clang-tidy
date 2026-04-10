@@ -1,0 +1,11 @@
+Checks: >
+  bugprone-*,
+  performance-*,
+  readability-*,-readability-identifier-naming,-readability-magic-numbers,
+  modernize-*,
+  clang-analyzer-*,
+  portability-*
+WarningsAsErrors: ''
+HeaderFilterRegex: '^(include|src)/'
+AnalyzeTemporaryDtors: false
+FormatStyle: file
